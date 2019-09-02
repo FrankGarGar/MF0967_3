@@ -1,7 +1,5 @@
 package modelos;
 
-import com.libros.modelos.ModeloException;
-
 public class Usuario {
 	private String usuario;
 	private String password;
