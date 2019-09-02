@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		final RequestDispatcher requestDispatcherLogin = request.getRequestDispatcher(VISTAS_LOGIN_JSP);
 		final RequestDispatcher requestDispatcherPrincipal = request.getRequestDispatcher(VISTAS_PRINCIPAL_JSP);
-		//Recoger información de la petición
+		//Recoger informaciÃ³n de la peticiÃ³n
 		String nick = request.getParameter("usuario");
 		String password = request.getParameter("password");
 		
@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 			requestDispatcherLogin.forward(request, response);
 			return;
 		}
-		//Ejecutar lógica de negocio
+		//Ejecutar lÃ³gica de negocio
 		if(LogicaNegocio.isAutenticado(usuario)) {
 			//Redireccionar a un controlador
 			request.getSession().setAttribute("usuario", usuario);

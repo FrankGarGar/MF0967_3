@@ -32,7 +32,7 @@ public class AdminFilter implements Filter {
 		//String url = httpRequest.getRequestURL().substring(0); 
 		final RequestDispatcher requestDispatcherLogin = httpRequest.getRequestDispatcher(VISTAS_LOGIN_JSP);
 		Usuario usuario = (Usuario) httpRequest.getSession().getAttribute("usuario");
-		
+		System.out.println("SS");
 		if(usuario == null) {
 			requestDispatcherLogin.forward(request, response);
 			
